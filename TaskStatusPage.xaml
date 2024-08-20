@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Task_Management_Application.TaskStatusPage"
+             xmlns:local="clr-namespace:Task_Management_Application">
+
+    <StackLayout BackgroundColor="Lavender">
+        <Label Text="Your Tasks"  FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,15,0,0"/>
+
+
+        <ListView ItemsSource="{x:Static local:App.Tasks}" >
+
+            <ListView.ItemTemplate>
+
+                <DataTemplate >
+
+                    <TextCell Text="{Binding Name}" Detail="{Binding Time}" />
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+        <Button Text="Go To Home Page" Background="CornflowerBlue" Margin="7" Clicked="onHomeButtonClicked">
+
+        </Button>
+    </StackLayout>
+</ContentPage>

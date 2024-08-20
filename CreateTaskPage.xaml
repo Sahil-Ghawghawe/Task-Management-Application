@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Task_Management_Application.CreateTaskPage">
+
+
+    <StackLayout Background="WhiteSmoke">
+
+        <Label Text="Create Task" FontSize="Large" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,15,0,0"/>
+
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+
+            <Entry Placeholder="Task Name" HorizontalTextAlignment="Center" x:Name="taskNameEntry" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" MinimumWidthRequest="100"/>
+            <TimePicker x:Name="taskTimePicker" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" TextColor="Black"/>
+            <Button Text="Create" MinimumWidthRequest="150" CornerRadius="15" FontAttributes="Bold" BackgroundColor="Brown" Clicked="onCreateClicked" Margin="0,25,0,0" />
+
+        </StackLayout>
+        <Button Text="Go To Home Page" Background="CornflowerBlue" Margin="7" Clicked="onHomeButtonClicked"/>
+
+    </StackLayout>
+
+</ContentPage>
